@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html class = "no-js">
+<head>
+<meta charset = "utf-8">
+<title>Inventrust - Profile-Non-Loggedin</title>
+<meta name = "description" content = "Place your description here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/message.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/lightGallery.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/ng-tags-input.min.css" />
+<script src="../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body><!-- #BeginLibraryItem "/Library/before-login-header.lbi" -->
+<nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../feeds-and-profile/feeds-guest-view.html">Inven<span>Trust</span></a>
+      <div class="default-login visible-xs">
+        <a class="pull-right"><i class="icon-default-login"></i></a>
+      </div>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navigation-bar">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clusters <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a>3D Printing</a></li>
+            <li><a>EV Charging</a></li>
+            <li><a>Mobile Wallet</a></li>
+            <li><a>Neural Implants</a></li>
+            <li><a>Ophthalmology</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Patents</a></li>
+        <li><a href="#">Collectives</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <form class="navbar-form navbar-left hidden-xs" id="global-search">
+        <button class="search-contentinput visible-sm btn" type="button"><i class="icon-search"></i></button>
+        <div class="form-group global-search-from hidden-sm">
+          <input type="text" class="form-control" placeholder="Quick Search">
+          <button type="submit" class="btn btn-link"><i class="icon-search"></i></button>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li data-toggle="modal" data-target="#loginPage"><a>Login</a></li>
+        <li><a>Signup</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- #EndLibraryItem --><section class="main-section">
+  <div class="container">
+
+    <div class="wrapper"  data-ng-controller="messageCtrl"> 
+        <div class="custom-modal messageBlock">
+        <div class="row">
+            <aside class="col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="message-left">
+                        <div class="m-left-header">
+                            <span class="msz-label">INBOX</span>
+                            <!-- visible-xs -->
+                            <a class="btn btn-default pull-right m-l-5 visible-xs" id="newMessage">
+                                <i class="icon-new-mzs"></i>
+                            </a>
+                            <div class="m-left-dropdown">
+                                <a data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                    <span class="text">More</span> <i class="icon-caret"></i>
+                                </a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="javascript:void(0);">Unread</a></li>
+                                    <li><a href="javascript:void(0);">Archive</a></li>
+                                    <li><a href="javascript:void(0);">Delete</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="m-search">
+                            <i class="icon-m-search"></i>
+                            <input type="text" class="m-search-input" value="" placeholder="Search">
+                        </div>
+                        <div class="m-left-scroll mCustomScrollbar">
+                            <ul class="m-user-listing">
+                                <li class="unread">
+                                    <div class="m-user-thmb group-thumb-two">
+                                        <span><img src="../assets/img/thumb50-8.png" alt=""></span>
+                                        <span><img src="../assets/img/thumb50-8.png" alt=""></span>
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">11:40 am</span>
+                                        <a class="m-new-msz">2 New</a>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove" data-toggle="tooltip" data-placement="top" title="Remove">&nbsp;</i>
+                                            <i class="icon-msz-archive" data-toggle="tooltip" data-placement="top" title="Archive">&nbsp;</i>
+                                            <i class="icon-msz-read" data-toggle="tooltip" data-placement="top" title="Mark as read / unread">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson, Michael Morgan</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li class="one-to-one">
+                                    <div class="m-user-thmb group-thumb">
+                                        <span><img src="../assets/img/thumb50-8.png" alt=""></span>
+                                        <span><img src="../assets/img/dummy2.jpg" alt=""></span>
+                                        <span><img src="../assets/img/thumb50-8.png" alt=""></span>
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Yesterday</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove" data-toggle="tooltip" data-placement="top" title="Remove">&nbsp;</i>
+                                            <i class="icon-msz-archive" data-toggle="tooltip" data-placement="top" title="Archive">&nbsp;</i>
+                                            <i class="icon-msz-read" data-toggle="tooltip" data-placement="top" title="Mark as read / unread">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson, Michael Morgan, Eric Curtis</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy2.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove" data-toggle="tooltip" data-placement="top" title="Remove">&nbsp;</i>
+                                            <i class="icon-msz-archive" data-toggle="tooltip" data-placement="top" title="Archive">&nbsp;</i>
+                                            <i class="icon-msz-read" data-toggle="tooltip" data-placement="top" title="Mark as read / unread">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/thumb50-8.png" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove" data-toggle="tooltip" data-placement="top" title="Remove">&nbsp;</i>
+                                            <i class="icon-msz-archive" data-toggle="tooltip" data-placement="top" title="Archive">&nbsp;</i>
+                                            <i class="icon-msz-read" data-toggle="tooltip" data-placement="top" title="Mark as read / unread">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy1.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy2.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/thumb50-8.png" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy1.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy2.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/thumb50-8.png" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy1.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="m-user-thmb">
+                                        <img src="../assets/img/dummy2.jpg" alt="">
+                                    </div>
+                                    <div class="m-msz-detail-right">
+                                        <span class="m-msz-time">Apr 26</span>
+                                        <div class="m-msz-action">
+                                            <i class="icon-msz-remove">&nbsp;</i>
+                                            <i class="icon-msz-archive">&nbsp;</i>
+                                            <i class="icon-msz-read">&nbsp;</i>
+                                        </div>
+                                    </div>
+                                    <div class="m-msz-indetail">
+                                        <span class="m-ellipsis">Kevin Peterson</span>
+                                        <div class="m-msz-short m-ellipsis">What is your plan, about</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="loader"></div>
+                    </div>
+                    <!-- Message Right Section -->
+                    <div class="message-right overflow hidden-xs">
+                        <div class="m-right-header">
+                            <div class="m-right-head-left">
+                                <div class="m-user-name">
+                                    <div class="backto-list visible-xs" id="backTolist">
+                                        <i class="icon-back"></i>
+                                    </div>
+                                    <span class="m-name-list"> <span data-rel="group-usertip"> Ema, Watson </span> </span>
+                                    <div class="btn-group edit-group-name">
+                                        <button type="button" class="btn btn-default btn-sm" onclick="$('.m-edit-group-name').fadeIn();">
+                                            <i class="icon-m-edit"></i>
+                                        </button>
+                                    </div>
+                                    <div class="m-edit-group-name">
+                                        <div class="group-name-content">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Conversation Name</td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Conversation Picture</td>
+                                                        <td>
+                                                            <div class="group-pic-view pos-relative" style="display:none;"><i class="icon-removemedia"></i><img src="../assets/img/dummy3.jpg" alt=""></div>
+                                                            <div class="browse-button">
+                                                                <button type="button" class="btn btn-primary">BROWSE</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" onclick="$('.m-edit-group-name').hide();" class="btn btn-primary btn-sm pull-right">DONE</button>
+                                            <button type="submit" onclick="$('.m-edit-group-name').hide();" class="btn btn-default pull-right">CANCEL</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-right-head-right">
+                                <a class="btn btn-default pull-right visible-xs" id="newMessage">
+                                    <i class="icon-new-mzs"></i>
+                                </a>
+                                <button type="button" class="btn btn-default btn-sm pull-right hidden-xs" onclick="$('.m-new-message').show();$('.m-conversation-content, .m-add-people-button').hide();"><i class="icon-newmsz"></i>New Message</button>
+                                <div class="btn-group m-add-people-button">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+                                        <i class="icon-settings"></i></button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a data-toggle="modal" data-target="#addPeople">Add People</a></li>
+                                        <li><a data-toggle="modal" data-target="#editParticipants">Edit Participants</a></li>
+                                        <li><a data-toggle="modal" data-target="#deleteConversation">Delete Conversation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-conversation">
+                            <div class="loader"></div>
+                            <aside class="m-new-message" style="display:none;">
+                                <span class="m-message-to">To:  </span>
+                                <div class="m-autosuggest">
+                                    <div id="sendMszto">
+                                        <tags-input ng-model="tagsto" display-property="name" placeholder="Name" replace-spaces-with-dashes="false">
+                                            <auto-complete source="loadFriendslist($query)" min-length="0" load-on-focus="true" load-on-empty="true" max-results-to-show="4" template="userDropdownTemplate"></auto-complete>
+                                        </tags-input>
+                                    </div>
+                                    <script type="text/ng-template" id="userDropdownTemplate">
+                                        <a href="javascript:void(0);" class="m-conv-list-thmb">
+                                            <img ng-src="../assets/img/{{data.thumb}}" alt="">
+                                        </a>
+                                        <a href="javascript:void(0);" class="m-u-list-name" ng-bind-html="$highlight($getDisplayText())"></a>
+                                    </script>
+                                </div>
+                            </aside>
+                            <div class="m-conversation-block mCustomScrollbar">
+                                <div class="m-conversation-content">
+                                    <abbr class="conv-started">Conversation started 10 Nov 2014</abbr>
+                                    <ul class="m-conversation-list">
+                                        <li>
+                                            <i class="icon-remove"></i>
+                                            <a href="javascript:void(0);" class="m-conv-list-thmb">
+                                                <img src="../assets/img/thumb50-8.png" alt="">
+                                            </a>
+                                            <div class="overflow m-conv-msz">
+                                                <a href="javascript:void(0);">Ema Qureshi</a>
+                                                <span class="m-msz-time">11:40 am</span>
+                                                <div class="m-msz-text">Visited the old Museum, It was pretty neat, Missed You!</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon-remove"></i>
+                                            <a href="javascript:void(0);" class="m-conv-list-thmb">
+                                                <img src="../assets/img/thumb50-8.png" alt="">
+                                            </a>
+                                            <div class="overflow m-conv-msz">
+                                                <a href="javascript:void(0);">Ema Qureshi</a>
+                                                <span class="m-msz-time">11:40 am</span>
+                                                <div class="m-msz-text">Visited the old Museum, It was pretty neat, Missed You!</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="m-conv-list-thmb">
+                                                <img src="../assets/img/thumb50-8.png" alt="">
+                                            </a>
+                                            <div class="overflow m-conv-msz">
+                                                <a href="javascript:void(0);">Ema Qureshi</a>
+                                                <span class="m-msz-time">11:40 am</span>
+                                                <div class="m-msz-text">Yelo file</div>
+                                                <div class="m-attached-file">
+                                                    <i class="icon-m-attached"></i>
+                                                    <span class="filename">MyProfile.mp3</span>
+                                                    <a href="javascript:void(0);">Download</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="m-conv-date"><span>13 Nov 2014</span></li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="m-conv-list-thmb">
+                                                <img src="../assets/img/thumb50-8.png" alt="">
+                                            </a>
+                                            <div class="overflow m-conv-msz">
+                                                <a href="javascript:void(0);">Ema Qureshi</a>
+                                                <span class="m-msz-time">11:40 am</span>
+                                                <div class="m-msz-text">Hi How are you,</div>
+                                                <ul class="m-msz-attached lightGallery">
+                                                    <li class="attached-list" data-src="../assets/img/msz-post-img.jpg">
+                                                        <img src="../assets/img/msz-post-img.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy13.jpg">
+                                                        <img src="../assets/img/dummy13.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy14.jpg">
+                                                        <img src="../assets/img/dummy14.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy15.jpg">
+                                                        <img src="../assets/img/dummy15.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy12.jpg">
+                                                        <img src="../assets/img/dummy12.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy11.jpg">
+                                                        <img src="../assets/img/dummy11.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="m-conv-list-thmb">
+                                                <img src="../assets/img/thumb50-8.png" alt="">
+                                            </a>
+                                            <div class="overflow m-conv-msz">
+                                                <a href="javascript:void(0);">Ema Qureshi</a>
+                                                <span class="m-msz-time">11:40 am</span>
+                                                <div class="m-msz-text">Hi How are you,</div>
+                                                <ul class="m-msz-attached lightGallery">
+                                                    <li class="attached-list" data-src="../assets/img/dummy14.jpg">
+                                                        <img src="../assets/img/dummy14.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy15.jpg">
+                                                        <img src="../assets/img/dummy15.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy12.jpg">
+                                                        <img src="../assets/img/dummy12.jpg" alt="">
+                                                    </li>
+                                                    <li class="attached-list" data-src="../assets/img/dummy11.jpg">
+                                                        <img src="../assets/img/dummy11.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="m-group-activity">
+                                            <span class="m-msz-time pull-right">11:40 am</span>
+                                            <div>You removed <a title="Ashish Choudhary" data-toggle="tooltip"> Ashish Choudhary</a> from the conversation. </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Write a Reply  -->
+                        <div class="clear"></div>
+                        <div class="m-write-reply">
+                            <div class="m-write-reply-inner">
+                                <div class="m-write-msz">
+                                    <textarea name="" placeholder="Write a Reply"></textarea>
+                                </div>
+                                <div class="m-attachment-view mCustomScrollbar " style="display:none;">
+                                    <div class="loader" style="width:24px; height:24px; margin:-12px 0 0 -12px;"></div>
+                                    <div class="m-file-attached-list" style="display:none;">
+                                        <i class="icon-m-attached"></i> Myportfolio.pdf
+                                        <i class="icon-remove-attached pull-right"></i>
+                                    </div>
+                                    <div class="m-media-attached-list" style="display:none;">
+                                        <ul>
+                                            <li>
+                                                <img src="../assets/img/dummy-img1.jpg" alt="">
+                                                <div class="m-hoveraction"><i class="icon-removemedia"></i></div>
+                                            </li>
+                                            <li>
+                                                <img src="../assets/img/dummy-img1.jpg" alt="">
+                                                <div class="m-hoveraction"><i class="icon-removemedia"></i></div>
+                                            </li>
+                                            <li>
+                                                <img src="../assets/img/dummy-img1.jpg" alt="">
+                                                <div class="m-hoveraction"><i class="icon-removemedia"></i></div>
+                                            </li>
+                                            <li>
+                                                <img src="../assets/img/dummy-img1.jpg" alt="">
+                                                <div class="m-hoveraction"><i class="icon-removemedia"></i></div>
+                                            </li>
+                                            <li>
+                                                <img src="../assets/img/dummy-img1.jpg" alt="">
+                                                <div class="m-hoveraction"><i class="icon-removemedia"></i></div>
+                                            </li>
+                                            <li>
+                                                <img src="../assets/img/dummy-img1.jpg" alt="">
+                                                <div class="m-hoveraction"><i class="icon-removemedia"></i></div>
+                                            </li>
+                                            <li>
+                                                <div class="m-laoder">
+                                                    <div class="loader"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="m-attachment-block">
+                                    <ul class="m-attachment-button">
+                                        <li onclick="$('.m-file-attached-list, .m-attachment-view').show(); messageColresize();">
+                                            <i class="icon-addfile"></i> Add Files
+                                            <input type="file">
+                                        </li>
+                                        <li onclick="$('.m-media-attached-list, .m-attachment-view').show(); messageColresize();">
+                                            <i class="icon-photo"></i> Add Photos
+                                            <input type="file">
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-primary btn-small pull-right"> <i class="icon-sendmsz"></i> Send </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <!-- Add People -->
+    <div class="modal fade in" id="addPeople" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center">
+                <div class="modal-content">
+                    <div class="modal-header message">
+              <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+                        <h4 class="modal-title" id="myModalLabel2">Add People</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter the names of people you want to add. People you add will see all previous messages in this conversation.</p>
+                        <div class="form-group">
+                            <div data-error="" class="text-field m-inputtag">
+                                <div class="tag-view">
+                                    <tags-input ng-model="tags">
+                                        <auto-complete source="loadTags($query)"></auto-complete>
+                                    </tags-input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary pull-right marleft10" data-dismiss="modal">ADD</button>
+                        <button type="submit" class="btn btn-default pull-right" data-dismiss="modal">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Participants -->
+    </div>
+  </div>
+</section>
+
+<!-- login Popup -->
+<div class="modal fade" id="loginPage" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <p class="modal-desc">Please enter your inventrust credentials to continue</p>
+      </div>
+      <div class="modal-body">
+        <form id="loginPageWrap" class="form-sm">
+          <div class="form-group">
+            <input type="email" class="form-control" id="textEmail" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="textPassword" placeholder="Password">
+          </div>
+          <div class="form-group form-action">
+            <button class="btn btn-link pull-left" data-toggle="modal" data-target="#forgotPasswordPage"  data-dismiss="modal">Forgot Password ?</button>
+            <button class="btn btn-primary btn-lg loader-btn pull-right">LOGIN <span class="btn-loader"> <span class="spinner-btn">&nbsp;</span> </span></button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer"> Don’t have an account? <a data-toggle="modal" data-target="#requestInvite" data-dismiss="modal">Request an invite</a> </div>
+    </div>
+  </div>
+</div>
+
+<!-- Forgot Password Popup -->
+<div class="modal fade" id="forgotPasswordPage" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Forgot Password</h4>
+        <p class="modal-desc">Please enter your inventrust credentials to continue</p>
+      </div>
+      <div class="modal-body">
+        <form id="forgotpassPage" class="form-sm">
+          <div class="form-group">
+            <input type="email" class="form-control" id="textEmailAdd" placeholder="Email Address">
+          </div>
+          <div class="form-group form-action">
+            <button class="btn btn-primary btn-lg loader-btn pull-right">RESET PASSWORD</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Popup -->
+<div class="modal fade" id="requestInvite" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-sm">
+          <div class="social-icons">
+            <ul class="list-unstyled">
+              <li>
+                <div class="social-buttons">
+                  <button class="btn btn-primary btn-facebook btn-sm" type="button"> <i class="icon-facebook"></i> </button>
+                </div>
+              </li>
+              <li>
+                <div class="social-buttons">
+                  <button class="btn btn-primary btn-twitter btn-sm" type="button"> <i class="icon-twitter"></i> </button>
+                </div>
+              </li>
+              <li>
+                <div class="social-buttons">
+                  <button class="btn btn-primary btn-linkedin btn-sm" type="button"> <i class="icon-linkedin"></i> </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="separator-or">
+            <p class="">Or</p>
+          </div>
+          <div class="button-req">
+            <button class="btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteMember"><i class="icon-req-invite"></i>Request Invite </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Member Popup -->
+<div class="modal fade" id="requestInviteMember" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-md">
+          <ul class="cmn-listing list-unstyled">
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-1.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <button class="btn btn-mxs btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button>
+                  <h3 class="name">Joyce Patel</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-2.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Larry Alvarez</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-3.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Robert Kim</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-4.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Lori James</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-5.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Brittany Medina</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Form Popup -->
+<div class="modal fade" id="requestInviteForm" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-sm">
+          <div class="listing-center">
+            <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-1.png" alt="thumb"></figure>
+            <h3 class="name">Larry Alvarez</h3>
+            <p class="address">New York, USA</p>
+          </div>
+          <form id="requestForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="textName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="textEmailAddress" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group form-action mar-t-0">
+              <button class="btn btn-primary btn-lg loader-btn pull-right">SEND REQUEST</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="modal fade in" id="editParticipants" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+      <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+          <div class="modal-content">
+            <div class="modal-header message">
+              <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+              <h4 class="modal-title" id="myModalLabel3">Edit Participants</h4>
+            </div>
+            <div class="modal-body listing-view">
+                <div class="default-scroll mCustomScrollbar ">
+                  <ul class="cmn-listing list-unstyled">
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li> 
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li> 
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li>
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li>
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li>
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li>
+                      <li class="list-group-item"> 
+                        <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                          <div><a class="name">Doris Moore</a></div> 
+                          <p class="address">New York, USA</p>
+                        </div>
+                        <a class="remove-link" href="javascript:void(0);">Remove</a>
+                      </li> 
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary pull-right marleft10" data-dismiss="modal">ADD</button>
+                <button type="submit" class="btn btn-default pull-right" data-dismiss="modal">CANCEL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+ <!-- Create Events Modal -->
+    <div class="modal fade in" id="deleteConversation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+          <div class="modal-content">
+            <div class="modal-header message">
+              <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+              <h4 class="modal-title" id="myModalLabel">Delete This Entire Conversation?</h4>
+            </div>
+            <div class="modal-body">
+              <div class="m-confirm-content">
+                <p>Once you delete your copy of this conversation, it cannot be undone.</p>                
+              </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary pull-right marleft10" data-dismiss="modal">DELETE</button>
+                <button type="submit" class="btn btn-default pull-right" data-dismiss="modal">CANCEL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Custom Tooltip -->
+ 
+<div class="customTooltip animated" data-rel="custom-tooltip">
+    <div class="tooltip-content mCustomScrollbar">
+      <!--tooltip content goes heer-->
+        <ul class="autosuggest-list">
+          <li>
+            <figure> <img src="../assets/img/user-thmb.jpg" alt=""> </figure>
+            <a>Suresh Patidar</a>
+          </li>
+          <li>
+            <figure> <img src="../assets/img/user-thmb.jpg" alt=""> </figure>
+            <a>Satish Jain</a>
+          </li>
+          <li>
+            <figure> <img src="../assets/img/user-thmb.jpg" alt=""> </figure>
+            <a>Satish Gang</a>
+          </li>
+          <li>
+            <figure> <img src="../assets/img/user-thmb.jpg" alt=""> </figure>
+            <a>Satish Peterson</a>
+          </li>
+          <li>
+            <figure> <img src="../assets/img/user-thmb.jpg" alt=""> </figure>
+            <a>Satish Jain</a>
+          </li>
+        </ul>
+    </div>
+</div>
+
+<!--/Custom tooltip-->
+
+
+
+
+
+<!-- Mandatory jQuery/Javascript --> 
+<script src="../assets/js/vendor/jquery-1.11.2.min.js"></script> 
+<script src="../assets/js/vendor/bootstrap.min.js"></script> 
+  
+
+  <!-- Mandatory AngularJs --> 
+  <script src="../assets/lib/angular.min.js"></script>
+  <script src="../assets/js/ng-tags-input.min.js"></script> 
+  <script src="../assets/js/lightGallery.js"></script> 
+
+<script src="../assets/js/plugins.js"></script> 
+<script src="../assets/js/main.js"></script> 
+
+
+
+
+<!--ApplicationJS--> 
+  <script src="../assets/app/app.js"></script> 
+
+
+<!--ComponantsJS-->
+  <script src="../assets/plugins/forms/controller.js"></script>
+  <script src="../assets/plugins/forms/BaseControl.js"></script>
+  <script src="../assets/plugins/forms/chosen/chosen.jquery.min.js"></script>
+  <script src="../assets/plugins/forms/chosen/chosen.js"></script>  
+  <script src="../assets/app/mszcontroller.js"></script>
+
+
+
+
+<script>
+	$(document).ready(function() {
+
+   $('[data-toggle="tooltip"]').tooltip({
+        container: 'body'
+     });
+
+
+//Gallery View
+          
+ $('.lightGallery').lightGallery({
+
+        showThumbByDefault:false,
+        addClass:'showThumbByDefault',
+        hideControlOnEnd:true,
+        onOpen: function(){
+          var nextthmb = $('.thumb.active').next('.thumb').html();
+          var prevthmb = $('.thumb.active').prev('.thumb').html();
+
+          $('#lg-prev').append(prevthmb);
+          $('#lg-next').append(nextthmb);
+          $('.cl-thumb').remove(); 
+
+        },
+        onSlideNext: function (plugin) {
+         var nextthmb = $('.thumb.active').next('.thumb').html();
+          var prevthmb = $('.thumb.active').prev('.thumb').html();
+
+          $('#lg-prev').html(prevthmb);
+          $('#lg-next').html(nextthmb);
+        },
+        onSlidePrev: function (plugin) {
+         var nextthmb = $('.thumb.active').next('.thumb').html();
+          var prevthmb = $('.thumb.active').prev('.thumb').html();
+
+          $('#lg-prev').html(prevthmb);
+          $('#lg-next').html(nextthmb);
+        }
+
+    }); 
+
+  });
+</script>
+</body>
+</html>

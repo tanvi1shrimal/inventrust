@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html class = "no-js">
+<head>
+<meta charset = "utf-8">
+<title>Inventrust - Feeds-Loggedin-View</title>
+<meta name = "description" content = "Place your description here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/plugins.css" />
+<script src="../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body><!-- #BeginLibraryItem "/Library/after-login-header.lbi" -->
+<nav id="myNavbar1" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand">Inven<span>Trust</span></a> 
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navigation-bar">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clusters <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a>3D Printing</a></li>
+            <li><a>EV Charging</a></li>
+            <li><a>Mobile Wallet</a></li>
+            <li><a>Neural Implants</a></li>
+            <li><a>Ophthalmology</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Patents</a></li>
+        <li><a href="#">Collectives</a></li>
+        <li><a href="#">Pages</a></li>
+				<li><a href="#">Market Place</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <form class="navbar-form navbar-left hidden-xs" id="global-search">
+        <button class="search-contentinput visible-sm btn" type="button"><i class="icon-search"></i></button>
+        <div class="form-group global-search-from hidden-sm">
+          <input type="text" class="form-control" placeholder="Quick Search">
+          <button type="submit" class="btn btn-link"><i class="icon-search"></i></button>
+        </div>
+      </form>
+    </div>
+    <!-- /.navbar-collapse -->
+    <ul class="nav navbar-nav navbar-right after-loggedin">
+      <li class="visible-lg">
+        <button class="btn btn-link btn-md" type="button" data-toggle="modal" data-target="#writePost"  data-dismiss="modal"><i class="icon-pencil"></i>Write </button>
+      </li>
+      <li class="visible-lg">
+        <button class="btn btn-primary btn-md" type="button" onClick="window.location.href='../add-patent/inventors.html'"><i class="icon-claim"></i> Claim</button>
+      </li>
+      <li class="notify cmn-toggle-dropdown"> <a href="javascript:void(0);" class="notify-list"> <i class="icon-notify"></i> <span class="badge">12</span> </a>
+        <div class="dropdown-menu">
+          <div class="notification">
+            <div class="notify-content">
+              <div role="tabpanel"> 
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li  class="active"> <a href="#notify" aria-controls="notify" data-toggle="tab"><span class="space-icon"><i class="icon-notify-tab"></i></span> Notifications </a> </li>
+                  <li> <a href="#msg" aria-controls="msg" data-toggle="tab"><span class="space-icon"><i class="icon-msg-tab"></i></span> Messages </a> </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="notify">
+                    <div class="panel-body">
+                      <div class="default-scroll scrollbar">
+                        <div class="people-suggestion-loader">
+                          <div class="spinner32"></div>
+                        </div>
+                        <ul class="list-group removed-peopleslist">
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-23.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-22.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a> mehta followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-20.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">BAHZ </a>Liked Inspirograph </p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Photoshop Actions Store </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-23.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-22.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a> mehta followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-20.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">BAHZ </a>Liked Inspirograph </p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Photoshop Actions Store </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-23.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-22.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a> mehta followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-20.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">BAHZ </a>Liked Inspirograph </p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Photoshop Actions Store </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-23.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-22.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a> mehta followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-20.jpg" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">BAHZ </a>Liked Inspirograph </p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                          <li class="list-group-item">
+                            <div class="media">
+                              <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                              <div class="media-body">
+                                <p class="media-heading"><a class="fontwt-bold">Photoshop Actions Store </a>followed your work</p>
+                                <span class="post-time">3 hrs ago</span> </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="panel-footer"> <a class="view-more" href="../Library/user/profile-notification.html">View All Notifications</a> </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="msg">
+                    <div class="panel-body default-scroll scrollbar">
+                      <div class="people-suggestion-loader">
+                        <div class="spinner32"></div>
+                      </div>
+                      <ul class="list-group removed-peopleslist">
+                        <li class="list-group-item unread-notify">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-21.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item unread-notify">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/msz-post-img.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a>What is your plan, about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m3.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m1.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Michael Morgan </a>Hello!!!! </p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Eric Curtis </a>What is your plan, 
+                                about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-21.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/msz-post-img.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a>What is your plan, about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m3.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m1.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Michael Morgan </a>Hello!!!! </p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Eric Curtis </a>What is your plan, 
+                                about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-21.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/msz-post-img.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a>What is your plan, about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m3.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m1.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Michael Morgan </a>Hello!!!! </p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Eric Curtis </a>What is your plan, 
+                                about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-21.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Kevin Peterson </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/msz-post-img.jpg" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Anjali Sharma </a>What is your plan, about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m3.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Pariniti Kaif </a>How are you??</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/sugg-m1.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Michael Morgan </a>Hello!!!! </p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="media">
+                            <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-6.png" alt="..."> </a> </div>
+                            <div class="media-body">
+                              <p class="media-heading"><a class="fontwt-bold">Eric Curtis </a>What is your plan, 
+                                about...</p>
+                              <span class="post-time">3 hrs ago</span> </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="panel-footer"> <a class="view-more" href="../Library/user/message.html">View All Messages</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="btn-group"> <a class="profile-thumb dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img class="img-circle" alt="" src="../assets/img/nav-profile-thumb.png"> </a>
+          <ul class="dropdown-menu profile-dropdown">
+            <li>
+              <div class="user-info"> <a href="../self-wall/self-wall.html" class="name">Pamela Carr</a>
+                <p class="address">New York, USA</p>
+              </div>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li><a href="javascript:void(0);"><i class="icon-msg"></i>Message</a></li>
+            <li><a href="javascript:void(0);"><i class="icon-favorite"></i>Favorite</a></li>
+            <li><a href="javascript:void(0);"><i class="icon-setting"></i>Settings</a></li>
+            <li><a href="../add-patent/my-account.html"><i class="icon-account"></i>My Account</a></li>
+            <li><a href="javascript:void(0);"><i class="icon-logout"></i>Logout</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+
+<!-- write a post pop up-->
+    <div class="modal fade write-post" id="writePost" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        
+        <div class="modal-content">
+        <div class="modal-body">
+          <div class="post-write">
+          <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="What’s on your mind"></textarea>
+            </div>
+            <div class="uploaded-items clearfix">
+              <a>
+                <img src="../assets/img/upload-img1.jpg" alt="thumb">
+                <div class="m-hoveraction">
+                  <span class="close-media"><i class="icon-welclose"></i></span>
+                  <span class="image-discription">Stairs.jpg</span>
+                </div>
+              </a>
+              <a>
+                <img src="../assets/img/upload-img2.jpg" alt="thumb">
+                <div class="m-hoveraction">
+                  <span class="close-media"><i class="icon-welclose"></i></span>
+                  <span class="image-discription">Hand.jpg</span>
+                </div>
+              </a>
+              <a class="media-loaderbtn">
+                <div class="spinner"><img src="../assets/img/loader48.gif" alt="thumb"> </div>
+                <mark>Uploading</mark>
+              </a>
+              <a>
+                <img src="../assets/img/upload-img1.jpg" alt="thumb">
+                <div class="m-hoveraction">
+                <span class="image-discription">Stairs.jpg</span>
+                  <span class="close-media"><i class="icon-welclose"></i></span>
+                </div>
+              </a>
+              <a>
+                <img src="../assets/img/upload-img2.jpg" alt="thumb">
+                <div class="m-hoveraction">
+                 <span class="image-discription">Hand.jpg</span>
+                  <span class="close-media"><i class="icon-welclose"></i></span>
+                </div>
+              </a>
+              <a class="media-loaderbtn">
+                <div class="spinner"><img src="../assets/img/loader48.gif" alt="thumb"> </div>
+                <mark>Uploading</mark>
+              </a>
+              <a>
+                <img src="../assets/img/upload-img1.jpg" alt="thumb">
+                <div class="m-hoveraction">
+                <span class="image-discription">Stairs.jpg</span>
+                  <span class="close-media"><i class="icon-welclose"></i></span>
+                </div>
+              </a>
+              <a>
+                <img src="../assets/img/upload-img2.jpg" alt="thumb">
+                <div class="m-hoveraction">
+                 <span class="image-discription">Hand.jpg</span>
+                  <span class="close-media"><i class="icon-welclose"></i></span>
+                </div>
+              </a>
+              <a class="media-loaderbtn">
+                <div class="spinner"><img src="../assets/img/loader48.gif" alt="thumb"> </div>
+                <mark>Uploading</mark>
+              </a>
+            </div>
+          </div>
+            <div class="bg-gray clearfix">
+              <div class="form-group">
+                <select data-placeholder="Gender" class="form-control chosen-select gender-select" tabindex="2">
+                  <option disabled="" selected="">Select a Cluster (Mandatory)</option>
+                  <option value="">ENDOSCOPIC BITE BLOCK SYSTEM</option>
+                  <option value="">ENDOSCOPIC BITE BLOCK SYSTEM</option>
+                  <option value="">ENDOSCOPIC BITE BLOCK SYSTEM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="textName" placeholder="Enter Patent Name / Number">
+              </div>
+               <div class="clearfix">
+                      <div class="pull-left">
+                            <button type="button" class="btn btn-default btn-capture m-t4" onclick="$('#anotherimg2').trigger('click');">
+                              <i class="icon-attached"></i>
+                            </button>
+                            <div class="hiddendiv">
+                              <input type="file" name="" id="anotherimg2">
+                            </div>
+                      </div>
+                    <button class="btn btn-primary btn-lg pull-right" data-dismiss="modal">Done</button>
+                </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div><!-- #EndLibraryItem --><div class="post-type">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#home" role="tab" data-toggle="tab">Top Stories</a></li>
+    <li><a href="#profile" role="tab" data-toggle="tab">Recent</a></li>
+  </ul>
+</div>
+<section class="main-section">
+  <div class="container">
+    <div class="welcome-post">
+      <div class="row">
+        <div class="col-sm-1 col-xs-3">
+          <figure><img src="../assets/img/welcome-icon.png" alt="welcome" class="img-responsive"></figure>
+        </div>
+        <div class="col-sm-11 col-xs-9">
+          <div class="welcome-desc"> <i class="icon-welclose"></i>
+            <h3>Welcome to Inventrust</h3>
+            <p>InvenTrust is building the world’s largest social network for invention. Explore our options and disruptive growth areas where filling critical invention gaps can drive outsized returns. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <aside class="col-sm-8 wall-left">
+          <div class="left-col">
+            <div class="section-top">
+              <h3 class="title pull-left">Feeds</h3>
+              <div class="search-conent">
+                <div class="filters">
+                  <div class="filters-search">
+                    <div class="input-group global-sec-search">
+                      <input type="text" class="form-control" placeholder="Search" name="srch-filters" id="srch-filters">
+                      <div class="input-group-btn">
+                        <button class="btn-search" type="button"><i class="icon-search-secondary"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="content">
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/loggedin-img1.png" alt="..."> </a> </div>
+                  <div class="media-body">
+                    <div class="action-on-post"> <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="icon-bullets"></i> </a>
+                      <ul class="dropdown-menu">
+                        <li><a>Follow User</a></li>
+                        <li><a>Report Post</a></li>
+                        <li><a>Block User</a></li>
+                      </ul>
+                    </div>
+                    <div class="media-heading"> <span><a class="fontwt-bold text-black-hover">Walter Griffin</a> added a new post in <a class="fontwt-bold text-blue-hover">3D Printing</a> in reference to </span>
+                      <div class="dropdown drop-onhover"><a class="dropdown-toggle" data-hover="dropdown">US5431967A</a>
+                        <ul class="dropdown-menu dropddown-hover-menu">
+                          <li class="header"><a><span>US5431967A</span>Bite Block System </a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a><span>Applicant</span>Hitachi Ltd</a></li>
+                          <li><a><span>Inventor</span>Mariyasagayam<br>
+                            Marie Nestor</a></li>
+                          <li><a><span>Application Date</span>15 Sep, 2000</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li class="footer"><a>View Detail</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span class="post-time">15 Sep, 2015</span> </div>
+                </div>
+                <div class="post-info">
+                  <p>Methods and apparatus are provided for rapidly prototyping a three-dimensional object from a plurality of sequential layers wherein each layer is cut after being fused with a prceding layer <a class="readmore-text"> ...Read More</a></p>
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li>
+                        <div class="commn-share"><i class="icon-like"></i></div>
+                      </li>
+                      <li>
+                        <div class="commn-share"><i class="icon-comment"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>188</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="post-bottom">
+                    <textarea placeholder="Write a Comment" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="content">
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="..."> </a> </div>
+                  <div class="media-body">
+                    <div class="action-on-post"> <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="icon-bullets"></i> </a>
+                      <ul class="dropdown-menu">
+                        <li><a>Follow User</a></li>
+                        <li><a>Report Post</a></li>
+                        <li><a>Block User</a></li>
+                      </ul>
+                    </div>
+                    <div class="media-heading"> <span><a class="fontwt-bold text-black-hover">Catherin Paull</a> added a new post in <a class="fontwt-bold text-blue-hover">EV Charging</a></span> </div>
+                    <span class="post-time">15 Sep, 2015</span> </div>
+                </div>
+                <div class="post-info">
+                  <p>The Delphi Charge Coupler Connector with Cable is available for integration into Electric Vehicle Supply Equipment (EVSE) for charging Battery Electric Vehicles (BEV) and Plug-in Hybrid Electric Vehicles (PHEV)... <a class="readmore-text"> ...Read More</a></p>
+                  <img class="img-responsive" src="../assets/img/ev-post-image.jpg" alt="post-image">
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li class="">
+                        <div class="commn-share active"><i class="icon-like"></i></div>
+                      </li>
+                      <li>
+                        <div class="commn-share"><i class="icon-comment"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>188</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="post-bottom">
+                    <textarea placeholder="Write a Comment" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="content">
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/loggedin-img2.png" alt="..."> </a> </div>
+                  <div class="media-body">
+                    <div class="action-on-post"> <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="icon-bullets"></i> </a>
+                      <ul class="dropdown-menu">
+                        <li><a>Follow User</a></li>
+                        <li><a>Report Post</a></li>
+                        <li><a>Block User</a></li>
+                      </ul>
+                    </div>
+                    <div class="media-heading"> <span><a class="fontwt-bold text-black-hover">William Payne </a> added a new post in <a class="fontwt-bold text-blue-hover">3D Printing</a></span> </div>
+                    <span class="post-time">15 Sep, 2015</span> </div>
+                </div>
+                <div class="post-info">
+                  <p>The present invention generally relates to manufacturing apparatus, method of manufacture, and products manufactured thereby and more particularly to an integral three-dimensional object (6, 15) formed... <a class="readmore-text"> ...Read More</a></p>
+                  <img class="img-responsive" src="../assets/img/post-image.jpg" alt="post-image">
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li class="">
+                        <div class="commn-share active"><i class="icon-like"></i></div>
+                      </li>
+                      <li>
+                        <div class="commn-share"><i class="icon-comment"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>188</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="post-bottom">
+                    <textarea placeholder="Write a Comment" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="content">
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/loggedin-img4.png" alt="..."> </a> </div>
+                  <div class="media-body">
+                    <div class="action-on-post"> <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="icon-bullets"></i> </a>
+                      <ul class="dropdown-menu">
+                        <li><a>Follow User</a></li>
+                        <li><a>Report Post</a></li>
+                        <li><a>Block User</a></li>
+                      </ul>
+                    </div>
+                    <div class="media-heading"> <span><a class="fontwt-bold text-black-hover">Madison Powell </a> added a new post in <a class="fontwt-bold text-blue-hover">EV Charging</a> in reference to </span>
+                      <div class="dropdown drop-onhover"><a class="dropdown-toggle" data-hover="dropdown">US8907597B2</a>
+                        <ul class="dropdown-menu dropddown-hover-menu">
+                          <li class="header"><a><span>US8907597B2</span>Battery pack</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a><span>Applicant</span>Kim Jin-Wan,Yongin-si,KR</a></li>
+                          <li><a><span>Inventor</span>Kim, Jin-Wan<br>
+                            Yang, Jong-Woon</a></li>
+                          <li><a><span>Application Date</span>15 Sep, 2000</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li class="footer"><a>View Detail</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span class="post-time">15 Sep, 2015</span> </div>
+                </div>
+                <div class="post-info">
+                  <p>Method and system for providing route assistance for electric vehicles | Verfahren und System für das Bereitstellen einer Fahrtunterstützung für Elektrofahrzeuge | Procédé et système permettant de fournir une assistance de route pour.</p>
+                  <div class="input-file-types">
+                    <div class="owl-carousel" id="owl-example2">
+                      <div class="item"> <span class="fileinput-button"> <span class="file-name">Filament cartridge.pdf</span> <span class="red-bg file-type">PDF</span> </span> </div>
+                      <div class="item"> <span class="fileinput-button"> <span class="file-name">Cannon cartridge.doc</span> <span class="blue-bg file-type">DOC</span> </span> </div>
+                      <div class="item"> <span class="fileinput-button"> <span class="file-name">Sun Micro.xls</span> <span class="green-bg file-type">XLS</span> </span> </div>
+                    </div>
+                  </div>
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li>
+                        <div class="commn-share"><i class="icon-like"></i></div>
+                      </li>
+                      <li>
+                        <div class="commn-share"><i class="icon-comment"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>188</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="post-bottom">
+                    <textarea placeholder="Write a Comment" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="content">
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/loggedin-img3.png" alt="..."> </a> </div>
+                  <div class="media-body">
+                    <div class="action-on-post"> <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="icon-bullets"></i> </a>
+                      <ul class="dropdown-menu">
+                        <li><a>Follow User</a></li>
+                        <li><a>Report Post</a></li>
+                        <li><a>Block User</a></li>
+                      </ul>
+                    </div>
+                    <div class="media-heading"> <span><a class="fontwt-bold text-black-hover">Gerald Powell</a> added a new post in <a class="fontwt-bold text-blue-hover">3D Printing</a></span> </div>
+                    <span class="post-time">15 Sep, 2015</span> </div>
+                </div>
+                <div class="post-info">
+                  <p>New patent added <strong>Liquid, radiation-curable composition, especially for producing flexible cured articles by stereolithography</strong></p>
+                  <div class="input-file-types">
+                    <div class="owl-carousel" id="owl-example1">
+                      <div class="item"> <span class="fileinput-button"> <span class="file-name">Filament cartridge.pdf</span> <span class="red-bg file-type">PDF</span> </span> </div>
+                    </div>
+                  </div>
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li>
+                        <div class="commn-share"><i class="icon-like"></i></div>
+                      </li>
+                      <li>
+                        <div class="commn-share"><i class="icon-comment"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>188</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="post-bottom">
+                    <textarea placeholder="Write a Comment" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div class="content">
+                <div class="media">
+                  <div class="media-left media-middle"> <a href="#" class="img-circle"> <img class="media-object img-circle" src="../assets/img/loggedin-img5.png" alt="..."> </a> </div>
+                  <div class="media-body">
+                    <div class="action-on-post"> <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="icon-bullets"></i> </a>
+                      <ul class="dropdown-menu">
+                        <li><a>Follow User</a></li>
+                        <li><a>Report Post</a></li>
+                        <li><a>Block User</a></li>
+                      </ul>
+                    </div>
+                    <div class="media-heading"> <span><a class="fontwt-bold text-black-hover">Ryan Bowman</a> added a new post in <a class="fontwt-bold text-blue-hover">EV Charging</a> in reference to </span>
+                      <div class="dropdown drop-onhover"><a class="dropdown-toggle" data-hover="dropdown">US8981589B2</a>
+                        <ul class="dropdown-menu dropddown-hover-menu">
+                          <li class="header"><a><span>US8981589B2</span>Switched battery</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a><span>Applicant</span>GM Global Technology Operations LLC,Detroit,MI,US</a></li>
+                          <li><a><span>Inventor</span>Lienkamp, Sebastian<br>
+                            Kilian, Peter</a></li>
+                          <li><a><span>Application Date</span>15 Sep, 2000</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li class="footer"><a>View Detail</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span class="post-time">15 Sep, 2015</span> </div>
+                </div>
+                <div class="post-info">
+                  <p>Systems and methods are provided for regulating the state of charge of a battery.  The electrical system comprises a capacitive element, a switching arrangement coupled to the capacitive<a class="readmore-text"> ...Read More</a></p>
+                  <div class="input-file-types">
+                    <div class="owl-carousel" id="owl-example">
+                      <div class="item"> <span class="fileinput-button"> <span class="file-name">Filament cartridge.pdf</span> <span class="red-bg file-type">PDF</span> </span> </div>
+                      <div class="item"><span class="fileinput-button"><img src="../assets/img/ep-img1.jpg" alt="image"></span> </div>
+                      <div class="item"><span class="fileinput-button"><img src="../assets/img/ep-img3.jpg" alt="image"></span> </div>
+                      <div class="item"><span class="fileinput-button"><img src="../assets/img/ep-img2.jpg" alt="image"></span> </div>
+                      <div class="item"><span class="fileinput-button"><img src="../assets/img/ep-img1.jpg" alt="image"></span> </div>
+                      <div class="item"><span class="fileinput-button"><img src="../assets/img/ep-img3.jpg" alt="image"></span> </div>
+                      <div class="item"><span class="fileinput-button"><img src="../assets/img/ep-img2.jpg" alt="image"></span> </div>
+                    </div>
+                  </div>
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li>
+                        <div class="commn-share"><i class="icon-like"></i></div>
+                      </li>
+                      <li class="comments-share">
+                        <div class="commn-share active"><i class="icon-comment"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>188</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <div class="post-comments">
+                    <p class="view-all-comments"><a>View all 24 comments</a></p>
+                    <div class="comments-section">
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Barbara Mitchell</a>Heart touching video Please also share so more people can see it lorem ipsum</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-17.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Brian Fernandez </a>Think about that for a second: Despite all the information available at our fingertips, and all.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Danielle Cole </a>97% of people won’t spend any time actively seeking out new knowledge for their own development.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-18.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Roger Richards </a>a new mobile app that helps people learn digital marketing concepts in 5 minutes or less.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Barbara Mitchell</a>Heart touching video Please also share so more people can see it lorem ipsum</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-17.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Brian Fernandez </a>Think about that for a second: Despite all the information available at our fingertips, and all.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Danielle Cole </a>97% of people won’t spend any time actively seeking out new knowledge for their own development.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-18.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Roger Richards </a>a new mobile app that helps people learn digital marketing concepts in 5 minutes or less.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Barbara Mitchell</a>Heart touching video Please also share so more people can see it lorem ipsum</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-17.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Brian Fernandez </a>Think about that for a second: Despite all the information available at our fingertips, and all.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Danielle Cole </a>97% of people won’t spend any time actively seeking out new knowledge for their own development.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-18.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Roger Richards </a>a new mobile app that helps people learn digital marketing concepts in 5 minutes or less.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Barbara Mitchell</a>Heart touching video Please also share so more people can see it lorem ipsum</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-17.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Brian Fernandez </a>Think about that for a second: Despite all the information available at our fingertips, and all.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Danielle Cole </a>97% of people won’t spend any time actively seeking out new knowledge for their own development.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-18.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Roger Richards </a>a new mobile app that helps people learn digital marketing concepts in 5 minutes or less.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Barbara Mitchell</a>Heart touching video Please also share so more people can see it lorem ipsum</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-17.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Brian Fernandez </a>Think about that for a second: Despite all the information available at our fingertips, and all.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Danielle Cole </a>97% of people won’t spend any time actively seeking out new knowledge for their own development.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-18.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Roger Richards </a>a new mobile app that helps people learn digital marketing concepts in 5 minutes or less.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-16.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Barbara Mitchell</a>Heart touching video Please also share so more people can see it lorem ipsum</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-17.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Brian Fernandez </a>Think about that for a second: Despite all the information available at our fingertips, and all.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-2.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Danielle Cole </a>97% of people won’t spend any time actively seeking out new knowledge for their own development.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                      <div class="media">
+                        <div class="media-left media-top">
+                          <a href="#" class="img-circle">
+                            <img class="media-object img-circle" src="../assets/img/thumb50-18.png" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <p class="media-heading"><a class="fontwt-bold">Roger Richards </a>a new mobile app that helps people learn digital marketing concepts in 5 minutes or less.</p>
+                          <span class="post-time">2 mins ago</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-bottom">
+                    <textarea placeholder="Write a Comment" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-sm-4 wall-right">
+          <div class="right-col">
+            <div class="widgets">
+              <div class="widgets-heading">
+                <h5 class="widgets-title">Clusters</h5>
+              </div>
+              <div class="widgets-content">
+                <ul class="list-group list-simple-listing">
+                  <li class="list-group-item"><i class="icon-welclose"></i><a>EV Charging</a></li>
+                  <li class="list-group-item"><i class="icon-welclose"></i><a>3D Printing</a></li>
+                  <li class="list-group-item"><i class="icon-welclose"></i><a>Mobile Wallet</a></li>
+                </ul>
+                <a class="btn-link" data-dismiss="modal" data-toggle="modal" data-target="#addNewCluster"><i class="icon-addplus"></i>Add New Cluster</a> </div>
+            </div>
+            <div class="widgets">
+              <div class="widgets-heading">
+                <h5 class="widgets-title">TrustMap</h5>
+                <p class="widgets-desc">All patent activity in the last 60 days.</p>
+              </div>
+              <div class="widgets-content">
+                <div class="widget-map">
+                  <div class="map-relative">
+                    <img class="img-responsive" src="../assets/img/map.jpg" alt="map">
+                    <i class="icon-map-maginfier"></i>
+                  </div>
+                  <div class="post-share-list">
+                    <ul class="list-inline">
+                      <li>
+                        <div class="commn-share"><i class="icon-comment-dark"></i><span>24</span></div>
+                      </li>
+                      <li class="pull-right">
+                        <div class="commn-share"><i class="icon-view"></i><span>272</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widgets">
+              <div class="widgets-heading">
+                <h5 class="widgets-title">Suggested Members</h5>
+              </div>
+              <div class="widgets-content">
+                <ul class="cmn-listing list-unstyled action-wrap">
+                  <li class="list-group-item">
+                    <ul class="action-btns list-unstyled">
+                      <li>
+                        <button class="btn btn-mxs btn-primary"><i class="icon-invtfriend"></i></button>
+                      </li>
+                    </ul>
+                    <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m1.png" alt="thumb"></a>
+                      <div><a class="name">Doris Moore</a></div>
+                      <ul class="sub-listing">
+                        <li>200 Followers</li>
+                        <li>23 Patents</li>
+                      </ul>
+                      <p class="address">New York, USA</p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <ul class="action-btns list-unstyled">
+                      <li>
+                        <button class="btn btn-mxs btn-primary"><i class="icon-invtfriend"></i></button>
+                      </li>
+                    </ul>
+                    <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m2.png" alt="thumb"></a>
+                      <div><a class="name">Kathleen Martinez</a></div>
+                      <ul class="sub-listing">
+                        <li>119 Followers</li>
+                        <li>23 Patents</li>
+                      </ul>
+                      <p class="address">New York, USA</p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <ul class="action-btns list-unstyled">
+                      <li>
+                        <button class="btn btn-mxs btn-primary"><i class="icon-invtfriend"></i></button>
+                      </li>
+                    </ul>
+                    <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m3.png" alt="thumb"></a>
+                      <div><a class="name">Jane Castro</a></div>
+                      <ul class="sub-listing">
+                        <li>900 Followers</li>
+                        <li>230 Patents</li>
+                      </ul>
+                      <p class="address">New York, USA</p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <ul class="action-btns list-unstyled">
+                      <li>
+                        <button class="btn btn-mxs btn-primary"><i class="icon-invtfriend"></i></button>
+                      </li>
+                    </ul>
+                    <div class="listing-row with-thumb"> <a class="thumb-img img-circle"><img src="../assets/img/sugg-m4.png" alt="thumb"></a>
+                      <div><a class="name">Maria Garcia</a></div>
+                      <ul class="sub-listing">
+                        <li>500 Followers</li>
+                        <li>32 Patents</li>
+                      </ul>
+                      <p class="address">New York, USA</p>
+                    </div>
+                  </li>
+                </ul>
+                <a class="btn-link font-size12">View All</a> </div>
+            </div>
+            <div class="widgets">
+              <div class="widgets-heading">
+                <h5 class="widgets-title">RSS Feed</h5>
+              </div>
+              <div class="widgets-content">
+                <div class="news-feed">
+                  <h5>NewYork Times > 3D Printing</h5>
+                  <p>Apparatus and related method for forming a substantially flat stereolithographic working surface...</p>
+                  <span class="post-time">12 Sep, 2015</span> </div>
+                <div class="news-feed">
+                  <h5>NewYork Times > 3D Printing</h5>
+                  <p>Method for building and using three-dimensional objects containing embedded identification-tag inserts...</p>
+                  <span class="post-time">12 Sep, 2015</span> </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- login Popup -->
+<div class="modal fade" id="loginPage" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+        <p class="modal-desc">Please enter your inventrust credentials to continue</p>
+      </div>
+      <div class="modal-body">
+        <form id="loginPageWrap" class="form-sm">
+          <div class="form-group">
+            <input type="email" class="form-control" id="textEmail" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="textPassword" placeholder="Password">
+          </div>
+          <div class="form-group form-action">
+            <button class="btn btn-link pull-left" data-toggle="modal" data-target="#forgotPasswordPage"  data-dismiss="modal">Forgot Password ?</button>
+            <button class="btn btn-primary btn-lg loader-btn pull-right">LOGIN <span class="btn-loader"> <span class="spinner-btn">&nbsp;</span> </span></button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer"> Don’t have an account? <a data-toggle="modal" data-target="#requestInvite" data-dismiss="modal">Request an invite</a> </div>
+    </div>
+  </div>
+</div>
+
+<!-- Forgot Password Popup -->
+<div class="modal fade" id="forgotPasswordPage" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Forgot Password</h4>
+        <p class="modal-desc">Please enter your inventrust credentials to continue</p>
+      </div>
+      <div class="modal-body">
+        <form id="forgotpassPage" class="form-sm">
+          <div class="form-group">
+            <input type="email" class="form-control" id="textEmailAdd" placeholder="Email Address">
+          </div>
+          <div class="form-group form-action">
+            <button class="btn btn-primary btn-lg loader-btn pull-right">RESET PASSWORD</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Popup -->
+<div class="modal fade" id="requestInvite" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-sm">
+          <div class="social-icons">
+            <ul class="list-unstyled">
+              <li>
+                <div class="social-buttons">
+                  <button class="btn btn-primary btn-facebook btn-sm" type="button"> <i class="icon-facebook"></i> </button>
+                </div>
+              </li>
+              <li>
+                <div class="social-buttons">
+                  <button class="btn btn-primary btn-twitter btn-sm" type="button"> <i class="icon-twitter"></i> </button>
+                </div>
+              </li>
+              <li>
+                <div class="social-buttons">
+                  <button class="btn btn-primary btn-linkedin btn-sm" type="button"> <i class="icon-linkedin"></i> </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="separator-or">
+            <p class="">Or</p>
+          </div>
+          <div class="button-req">
+            <button class="btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteMember"><i class="icon-req-invite"></i>Request Invite </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Member Popup -->
+<div class="modal fade" id="requestInviteMember" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-md">
+          <ul class="cmn-listing list-unstyled">
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-1.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <button class="btn btn-mxs btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button>
+                  <h3 class="name">Joyce Patel</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-2.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Larry Alvarez</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-3.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Robert Kim</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-4.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Lori James</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="listing-row">
+                <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-5.png" alt="thumb"></figure>
+                <div class="listing-decription">
+                  <h3 class="name">Brittany Medina</h3>
+                  <p class="address">New York, USA</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Form Popup -->
+<div class="modal fade" id="requestInviteForm" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+      <div class="modal-header">
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-sm">
+          <div class="listing-center">
+            <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-1.png" alt="thumb"></figure>
+            <h3 class="name">Larry Alvarez</h3>
+            <p class="address">New York, USA</p>
+          </div>
+          <form id="requestForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="textName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="textEmailAddress" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group form-action mar-t-0">
+              <button class="btn btn-primary btn-lg loader-btn pull-right">SEND REQUEST</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add New Cluster Form Popup -->
+<div class="modal fade" id="addNewCluster" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-xlg viewALL-link-popup" role="document">
+    <div class="modal-content">
+      <div class="modal-header borderB-gray">
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+        <h4 class="modal-title text-left">Clusters Added</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-xlg form-clusters scrollbar">
+          <div class="grid-list row">
+            <div class="col-sm-4">
+              <div class="thumbnail thumbnail-primary">
+                <a class="clusters">
+                  <figure><img src="../assets/img/3D-printing-Home.png" alt=""></figure>
+                  <div class="bg-overlay">
+                    <div class="cluster-discription">
+                      <h5>3D Printing</h5>
+                      <p><span>500</span> followers  .  <span>200+</span> Patents</p>
+                    </div>
+                  </div>
+                  <i class="icon-check"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail thumbnail-primary">
+                <a class="clusters">
+                  <figure><img src="../assets/img/EV-Charging-Home.png" alt=""></figure>
+                  <div class="bg-overlay">
+                    <div class="cluster-discription">
+                      <h5>EV Charging</h5>
+                      <p><span>150</span> followers  .  <span>100+</span> Patents</p>
+                    </div>
+                  </div>
+                  <i class="icon-check"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail thumbnail-primary">
+                <a class="clusters">
+                  <figure><img src="../assets/img/Mobile-Wallet-Home.png" alt=""></figure>
+                  <div class="bg-overlay">
+                    <div class="cluster-discription">
+                      <h5>Mobile Wallet</h5>
+                      <p><span>200</span> followers  .  <span>150+</span> Patents</p>
+                    </div>
+                  </div>
+                  <i class="icon-check"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail thumbnail-primary">
+                <a class="clusters">
+                  <figure><img src="../assets/img/Neural-Implants-Home.png" alt=""></figure>
+                  <div class="bg-overlay">
+                    <div class="cluster-discription">
+                      <h5> Neural Implants</h5>
+                      <p><span>300</span> followers  .  <span>250+</span> Patents</p>
+                    </div>
+                  </div>
+                  <i class="icon-check"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail thumbnail-primary">
+                <a class="clusters">
+                  <figure><img src="../assets/img/Ophthalmology-Home.png" alt=""></figure>
+                  <div class="bg-overlay">
+                    <div class="cluster-discription">
+                      <h5> Ophthalmology</h5>
+                      <p><span>350</span> followers  .  <span>220+</span> Patents</p>
+                    </div>
+                  </div>
+                  <i class="icon-check"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="thumbnail thumbnail-primary">
+                <a class="clusters">
+                  <figure><img src="../assets/img/grid-img-6.jpg" alt=""></figure>
+                  <div class="bg-overlay">
+                    <div class="cluster-discription">
+                      <h5>Bioengineering</h5>
+                      <p><span>50</span> followers  .  <span>20+</span> Patents</p>
+                    </div>
+                  </div>
+                  <i class="icon-check"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <button class="btn btn-primary pull-right">DONE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mandatory jQuery/Javascript --> 
+<script src="../assets/js/vendor/jquery-1.11.2.min.js"></script> 
+<script src="../assets/js/vendor/bootstrap.min.js"></script> 
+<script src="../assets/js/main.js"></script> 
+<script src="../assets/js/plugins.js"></script> 
+<script>
+  $(document).ready(function() {     
+    //Chosen
+    $(".chosen-select").chosen({
+      "disable_search": false  
+    });
+
+    //datepicker
+    $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true  
+      });
+
+    //owl-carousel
+    $("#owl-example,#owl-example1,#owl-example2").owlCarousel({
+      items : 3.5,
+      itemsCustom : false,
+      itemsDesktop : [1199,3.5],
+      itemsDesktopSmall : [980,2.5],
+      itemsTablet: [768,3.5],
+      itemsTabletSmall: false,
+      itemsMobile : [479,1.31],
+      singleItem : false,
+      itemsScaleUp : false,
+      pagination : false,
+      paginationNumbers: false
+     
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class = "no-js">
+<head>
+<meta charset = "utf-8">
+<title>Inventrust - Login</title>
+<meta name = "description" content = "Place your description here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/plugins.css" />
+<script src="../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+<nav id="myNavbar" class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="../home.html">Inven<span>Trust</span></a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav navbar-right">
+	        <li class="no-link">Already a member?</li>
+	        <li class="only-link" data-toggle="modal" data-target="#loginPage"><a>Login</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+</nav>
+<section class="main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default mar-t-40">
+          <div class="signup-form">
+            <div class="panel-heading">
+              <h3 class="panel-title text-center">Signup</h3>
+              <p class="modal-desc">InvenTrust is building the world’s largest social network for invention. Explore our options and disruptive.</p>
+            </div>
+            <div class="panel-body">
+            	<form id="signupForm">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>First Name <span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" placeholder="First Name" autofocus="autofocus">
+                      <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your first name."></span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Last Name <span class="mandatory">*</span></label>
+                      <input type="text" class="form-control" placeholder="Last Name">
+                      <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your last name."></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Register As <span class="mandatory">*</span></label>
+                  <div class="clearfix"></div>
+                  <div class="radio pull-left">
+                    <input id="individual" type="radio" name="register" value="Individual" >
+                    <label for="individual">Individual</label>
+                  </div>
+                  <div class="radio pull-left m-t-10">
+                    <input id="organization" type="radio" name="register" value="Institution/Organization" >
+                    <label for="organization">Institution/Organization</label>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group has-error">
+                  <label>Email Address<span class="mandatory">*</span></label>
+                  <input type="email" class="form-control" placeholder="Email Address">
+                  <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your email ID."></span>
+                </div>
+                 <div class="form-group show-password">
+                    <label>Password<span class="mandatory">*</span></label>
+                    <input type="password" class="form-control" placeholder="Password">
+                    <a class="btn-link">Show</a>
+                    <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter password."></span>
+                </div>
+                 <div class="form-group">
+                    <label>Confirm Password<span class="mandatory">*</span></label>
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                    <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please confirm your password."></span>
+                </div>
+                <div class="form-group form-action m-b-40">
+                  <span class="pull-left">Already a member? <a class="btn btn-link" data-toggle="modal" data-target="#loginPage">LOGIN</a></span>
+                  <div class="pull-right">
+                    <a class="btn-link">Cancel</a>
+                    <button type="submit" class="btn btn-primary btn-lg loader-btn m-l-10">SIGNUP</button> 
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- login Popup -->
+<div class="modal fade" id="loginPage" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+        <h4 class="modal-title">Login</h4>
+        <p class="modal-desc">Please enter your inventrust credentials to continue</p>
+      </div>
+      <div class="modal-body">
+        <form id="loginPageWrap" class="form-sm">
+	        <div class="form-group">
+		        <input type="email" class="form-control" id="textEmail" placeholder="Email Address">
+		        <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your Email id."></span>
+	        </div>
+	        <div class="form-group">
+		        <input type="password" class="form-control" id="textPassword" placeholder="Password">
+		        <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your password."></span>
+	        </div>
+	        <div class="form-group form-action">
+		        <a class="btn btn-link pull-left modal-open-dialog" data-toggle="modal" data-target="#forgotPasswordPage"  data-dismiss="modal">Forgot Password ?</a>
+		        <button class="btn btn-primary btn-lg loader-btn pull-right">LOGIN <span class="btn-loader"> <span class="spinner-btn">&nbsp;</span> </span></button>
+	        </div>
+        </form>	
+      </div>
+      <div class="modal-footer">
+      	Don’t have an account?
+      	<a class="modal-open-dialog" data-toggle="modal" data-target="#requestInvite" data-dismiss="modal">Request an invite</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Forgot Password Popup -->
+<div class="modal fade" id="forgotPasswordPage" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+        <h4 class="modal-title">Forgot Password</h4>
+        <p class="modal-desc">Please enter your inventrust credentials to continue</p>
+      </div>
+      <div class="modal-body">
+        <form id="forgotpassPage" class="form-sm">
+	        <div class="form-group">
+		        <input type="email" class="form-control" id="textEmailAdd" placeholder="Email Address">
+		        <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your Email id."></span>
+	        </div>
+	        <div class="form-group form-action">
+		        <button class="btn btn-primary btn-lg loader-btn pull-right">RESET PASSWORD</button>
+	        </div>
+        </form>	
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Popup -->
+<div class="modal fade" id="requestInvite" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+      	<div class="form-sm">
+	        <div class="social-icons">
+	        	<ul class="list-unstyled">
+	        		<li>
+	        			<div class="social-buttons">
+	                <button class="btn btn-primary btn-facebook btn-sm" type="button">
+	                	<i class="icon-facebook"></i>
+	                </button>
+	              </div>
+	        		</li>
+	        		<li>
+	        			<div class="social-buttons">
+	                <button class="btn btn-primary btn-twitter btn-sm" type="button">
+	                	<i class="icon-twitter"></i>
+	                </button>
+	              </div>
+	        		</li>
+	        		<li>
+	        			<div class="social-buttons">
+	                <button class="btn btn-primary btn-linkedin btn-sm" type="button">
+	                	<i class="icon-linkedin"></i>
+	                </button>
+	              </div>
+	        		</li>
+	        	</ul>
+	        </div>
+	        <div class="separator-or">
+	        	<p class="">Or</p>
+	        </div>
+	        <div class="button-req">
+	        	<button class="btn btn-primary btn-lg modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteMember"><i class="icon-req-invite"></i>Request Invite </button>
+	        </div>
+        </div>
+    	</div>
+  	</div>
+	</div>
+</div>
+
+<!-- Request Invite Member Popup -->
+<div class="modal fade" id="requestInviteMember" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+      	<div class="form-md">
+      		<div id="content-1" class="scroll-content">
+	      		<ul class="cmn-listing list-unstyled invite-listing action-wrap">
+	      			<li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-1.png" alt="thumb"></a>
+                  <div><a class="name">Larry Alvarez</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-2.png" alt="thumb"></a>
+                  <div><a class="name">Joyce Patel</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-3.png" alt="thumb"></a>
+                  <div><a class="name">Robert Kim</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-4.png" alt="thumb"></a>
+                  <div><a class="name">Lori James</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-5.png" alt="thumb"></a>
+                  <div><a class="name">Brittany Medina</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-1.png" alt="thumb"></a>
+                  <div><a class="name">Larry Alvarez</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-2.png" alt="thumb"></a>
+                  <div><a class="name">Joyce Patel</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-3.png" alt="thumb"></a>
+                  <div><a class="name">Robert Kim</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-4.png" alt="thumb"></a>
+                  <div><a class="name">Lori James</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-5.png" alt="thumb"></a>
+                  <div><a class="name">Brittany Medina</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li><li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-1.png" alt="thumb"></a>
+                  <div><a class="name">Larry Alvarez</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-2.png" alt="thumb"></a>
+                  <div><a class="name">Joyce Patel</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-3.png" alt="thumb"></a>
+                  <div><a class="name">Robert Kim</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-4.png" alt="thumb"></a>
+                  <div><a class="name">Lori James</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-5.png" alt="thumb"></a>
+                  <div><a class="name">Brittany Medina</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li><li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-1.png" alt="thumb"></a>
+                  <div><a class="name">Larry Alvarez</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-2.png" alt="thumb"></a>
+                  <div><a class="name">Joyce Patel</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-3.png" alt="thumb"></a>
+                  <div><a class="name">Robert Kim</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-4.png" alt="thumb"></a>
+                  <div><a class="name">Lori James</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-5.png" alt="thumb"></a>
+                  <div><a class="name">Brittany Medina</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li><li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-1.png" alt="thumb"></a>
+                  <div><a class="name">Larry Alvarez</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-2.png" alt="thumb"></a>
+                  <div><a class="name">Joyce Patel</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-3.png" alt="thumb"></a>
+                  <div><a class="name">Robert Kim</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-4.png" alt="thumb"></a>
+                  <div><a class="name">Lori James</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <ul class="action-btns list-unstyled">
+                  <li><button class="btn btn-mxs btn-primary modal-open-dialog" data-dismiss="modal" data-toggle="modal" data-target="#requestInviteForm"><i class="icon-invtfriend"></i></button></li>
+                </ul>
+                <div class="listing-row with-thumb">
+                  <a class="thumb-img img-circle"><img src="../assets/img/thumb50-5.png" alt="thumb"></a>
+                  <div><a class="name">Brittany Medina</a></div>
+                  <p class="address">New York, USA</p>
+                </div>
+              </li>
+
+	      		</ul>
+	      	</div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Invite Form Popup -->
+<div class="modal fade" id="requestInviteForm" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-modal-cross"></i></span></button>
+        <h4 class="modal-title">Request an invite</h4>
+        <p class="modal-desc w85">Look for friends who can invite you to Inventrust through Social media.</p>
+      </div>
+      <div class="modal-body">
+        <div class="form-sm">
+          <div class="listing-center">
+            <figure class="thumb-img"><img class="img-circle" src="../assets/img/thumb50-1.png" alt="thumb"></figure>
+            <h3 class="name">Larry Alvarez</h3>
+            <p class="address">New York, USA</p>
+          </div>
+          <form id="requestForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="textName" placeholder="Name">
+              <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your Name."></span>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="textEmailAddress" placeholder="Email Address">
+              <span class="error-block" data-toggle="tooltip" data-placement="bottom" title="Please enter your Email id."></span>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group form-action mar-t-0">
+              <button class="btn btn-primary btn-lg loader-btn pull-right">SEND REQUEST</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mandatory jQuery/Javascript --> 
+<script src="../assets/js/vendor/jquery-1.11.2.min.js"></script> 
+<script src="../assets/js/vendor/bootstrap.min.js"></script> 
+<script src="../assets/js/main.js"></script> 
+<script src="../assets/js/plugins.js"></script> 
+
+<script>
+	$(document).ready(function() {     
+		//Chosen
+	  $(".chosen-select").data("placeholder","Select Frameworks...").chosen({
+	    "disable_search": true, 
+	    placeholder_text_single: "Select an option"      
+	  });
+
+    //multiple choice bootstrap
+    $(document).ready(function() {
+        $('#selectRole').multiselect({
+            nonSelectedText: 'Select Options'
+        });
+    });
+    //datepicker
+		$( "#datepicker" ).datepicker({
+	    	changeMonth: true,
+	      changeYear: true,
+        yearRange: "1900:+nn",
+        maxDate: new Date()   
+	    });
+    // custom scrollbar
+		$("#content-1").mCustomScrollbar();
+	});
+  $(window).load(function(){
+    setTimeout(function(){
+    $(document).on('click touchstart','.search-choice-close',function(){    	 
+    	$(this).parent('.search-choice').remove();
+    })
+  },500)
+  });
+</script>
+</body>
+</html>
